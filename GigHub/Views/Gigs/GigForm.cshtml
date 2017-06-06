@@ -11,51 +11,51 @@
     @Html.AntiForgeryToken()
     @Html.HiddenFor(m => m.Id)
     <div class="form-group">
-        @Html.LabelFor(m => m.Title)
+        @Html.Label("Назва")
         @Html.TextBoxFor(m => m.Title, new { @class = "form-control", autofocus = "autofocus" })
         @Html.ValidationMessageFor(m => m.Title)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Description)
-        @Html.TextBoxFor(m => m.Description, new { @class = "form-control", placeholder = "eg 1 Jan 2015" })
+        @Html.Label("Опис")
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control rows='5' " })
         @Html.ValidationMessageFor(m => m.Description)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.City)
-        @Html.TextBoxFor(m => m.City, new { @class = "form-control", placeholder = "eg 20:00" })
+        @Html.Label("Місто")
+        @Html.TextBoxFor(m => m.City, new { @class = "form-control", placeholder = "Київ" })
         @Html.ValidationMessageFor(m => m.City)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Address)
-        @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "eg 20:00" })
+        @Html.Label("Адреса")
+        @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "вул. Симона Петлюри, 112" })
         @Html.ValidationMessageFor(m => m.Address)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Seats)
-        @Html.TextBoxFor(m => m.Seats, new { @class = "form-control", placeholder = "eg 20:00" })
+        @Html.Label("Вкажіть кількість місць")
+        @Html.TextBoxFor(m => m.Seats, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Seats)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Price)
-        @Html.TextBoxFor(m => m.Price, new { @class = "form-control", placeholder = "eg 20:00" })
+        @Html.Label("Вкажіть ціну за вхід з однієї людини")
+        @Html.TextBoxFor(m => m.Price, new { @class = "form-control", placeholder = "за замовчуванням безкоштовно" })
         @Html.ValidationMessageFor(m => m.Price)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Date)
-        @Html.TextBoxFor(m => m.Date, new { @class = "form-control", placeholder = "eg 20:00" })
+        @Html.Label("Дата")
+        @Html.TextBoxFor(m => m.Date, new { @class = "form-control", placeholder = "1 ЧЕР 2017" })
         @Html.ValidationMessageFor(m => m.Date)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Time)
-        @Html.TextBoxFor(m => m.Time, new { @class = "form-control", placeholder = "eg 20:00" })
+        @Html.Label("Час")
+        @Html.TextBoxFor(m => m.Time, new { @class = "form-control", placeholder = "20:00" })
         @Html.ValidationMessageFor(m => m.Time)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Genre)
+        @Html.Label("Виберіть тип заходу")
         @Html.DropDownListFor(m => m.Genre, new SelectList(Model.Genres, "Id", "Name"), "", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Genre)
     </div>
-    <button type="submit" class="btn btn-primary btn-lg">Save</button>
+    <button type="submit" class="btn btn-primary btn-lg">Зберегти</button>
 }
 @section scripts
 {

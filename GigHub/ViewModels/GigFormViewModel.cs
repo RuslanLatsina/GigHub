@@ -21,13 +21,13 @@ namespace GigHub.ViewModels
         [Required]
         public string Address { get; set; }
 
-        [Required]
+        
         public string Description { get; set; }
 
         [Required]
         public int Seats { get; set; }
 
-        [Required]
+        
         public string Price { get; set; }
 
         [Required]
@@ -45,20 +45,20 @@ namespace GigHub.ViewModels
 
         public string Heading { get; set; }
 
-        //public string Action
-        //{
-        //    get
-        //    {
-        //        Expression<Func<GigsController, ActionResult>> update =
-        //            (c => c.Update(this));
+        public string Action
+        {
+            get
+            {
+                Expression<Func<GigsController, ActionResult>> update =
+                    (c => c.Update(this));
 
-        //        Expression<Func<GigsController, ActionResult>> create =
-        //            (c => c.Create(this));
+                Expression<Func<GigsController, ActionResult>> create =
+                    (c => c.Create(this));
 
-        //        var action = (Id != 0) ? update : create;
-        //        return (action.Body as MethodCallExpression).Method.Name;
-        //    }
-        //}
+                var action = (Id != 0) ? update : create;
+                return (action.Body as MethodCallExpression).Method.Name;
+            }
+        }
 
         public DateTime GetDateTime()
         {

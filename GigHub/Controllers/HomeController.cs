@@ -18,10 +18,10 @@ namespace GigHub.Controllers
 
         public ActionResult Index(string query = null)
         {
-            var upcomingGigs = _context.Gigs
-                .Include(g => g.Organizer)
-                .Include(g => g.Genre)
-                .Where(g => g.DateTime > DateTime.Now && !g.IsCanceled);
+            var upcomingGigs = _context.Gigs;
+            //    .Include(g => g.Organizer)
+            //    .Include(g => g.Genre)
+            //    .Where(g => g.DateTime > DateTime.Now && !g.IsCanceled);
 
             //if (!String.IsNullOrWhiteSpace(query))
             //{
