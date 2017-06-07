@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using GigHub.ViewModels;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace GigHub.Models
@@ -72,6 +73,28 @@ namespace GigHub.Models
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [Display(Name = "UserName")]
         public string UserName { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Display(Name = "FullName")]
+        public string FullName { get; set; }
+
+        [Required]
+        [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "Please enter valid phone no.")]
+        public string PhoneNumber { get; set; }
+
+        [Required]
+        public GenderType Gender { get; set; }
+        [LuhnCardNumber]
+        public string CreditCardNumber { get; set; }
+        [Required]
+        [Range(16,100)]
+        public int Age { get; set; }
+        public bool IsOrganizer { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 2)]
+        public string City { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

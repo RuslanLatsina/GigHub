@@ -32,13 +32,13 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - GigHub App </p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/lib")
     @RenderSection("scripts", required: false)
-    <script type="text/x-template" id="notifications-template">
+    @*<script type="text/x-template" id="notifications-template">
         <ul class="notifications">
             <%
             _.each(notifications, function(notification){
@@ -104,6 +104,6 @@
 
             });
         });
-    </script>
+    </script>*@
 </body>
 </html>

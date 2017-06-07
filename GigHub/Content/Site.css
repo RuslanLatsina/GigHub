@@ -122,6 +122,11 @@ h6,
     margin-bottom: 20px;
 }
 
+.abc-checkbox {
+    padding-left: 4646px;
+    padding-top: 2px;
+    font-size: 9px;
+}
 .form-control {
     font-size: 17px;
     height: 44px;
@@ -227,4 +232,8 @@ h6,
     #searchGigs input {
         max-width: none;
     }
+
+
+
+
 /*# sourceMappingURL=site.css.map */

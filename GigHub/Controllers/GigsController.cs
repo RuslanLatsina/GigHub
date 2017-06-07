@@ -110,11 +110,13 @@ namespace GigHub.Controllers
                 Address = viewModel.Address,
                 City = viewModel.City,
                 Description = viewModel.Description,
-                Price = viewModel.Price,
+                Price = viewModel.Price ?? (viewModel.Price = "Безкоштовний вхід"),
                 Title = viewModel.Title,
                 Seats = viewModel.Seats
 
             };
+
+
 
             _context.Gigs.Add(gig);
             _context.SaveChanges();

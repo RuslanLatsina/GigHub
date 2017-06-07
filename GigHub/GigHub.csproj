@@ -195,26 +195,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706052110382_InitialCreate.cs" />
-    <Compile Include="Migrations\201706052110382_InitialCreate.Designer.cs">
-      <DependentUpon>201706052110382_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201706070944401_NewInitial.cs" />
+    <Compile Include="Migrations\201706070944401_NewInitial.Designer.cs">
+      <DependentUpon>201706070944401_NewInitial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706061233280_CreateGigTable.cs" />
-    <Compile Include="Migrations\201706061233280_CreateGigTable.Designer.cs">
-      <DependentUpon>201706061233280_CreateGigTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706061238431_populateGenreTable.cs" />
-    <Compile Include="Migrations\201706061238431_populateGenreTable.Designer.cs">
-      <DependentUpon>201706061238431_populateGenreTable.cs</DependentUpon>
+    <Compile Include="Migrations\201706070949332_populateGenre.cs" />
+    <Compile Include="Migrations\201706070949332_populateGenre.Designer.cs">
+      <DependentUpon>201706070949332_populateGenre.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RaitingDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FutureDate.cs" />
@@ -307,14 +306,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706052110382_InitialCreate.resx">
-      <DependentUpon>201706052110382_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706070944401_NewInitial.resx">
+      <DependentUpon>201706070944401_NewInitial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706061233280_CreateGigTable.resx">
-      <DependentUpon>201706061233280_CreateGigTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706061238431_populateGenreTable.resx">
-      <DependentUpon>201706061238431_populateGenreTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706070949332_populateGenre.resx">
+      <DependentUpon>201706070949332_populateGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
