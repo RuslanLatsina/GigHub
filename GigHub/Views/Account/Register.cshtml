@@ -3,12 +3,12 @@
     ViewBag.Title = "Register";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>Реєстрація</h2>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
+    
     <hr />
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
@@ -18,75 +18,109 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+        @Html.Label("Псевдонім", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.FullName, new { @class = "col-md-2 control-label" })
+        @Html.Label("Повне ім'я", new { @class = "col-md-2 control-label" })
+       
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.PhoneNumber, new { @class = "col-md-2 control-label" })
+        @Html.Label("Телефон", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.City, new { @class = "col-md-2 control-label" })
+        @Html.Label("Місто", new { @class = "col-md-2 control-label" })
+        
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Age, new { @class = "col-md-2 control-label" })
+        @Html.Label("Вік", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Gender, new { @class = "col-md-2 control-label" })
+        @Html.Label("Стать", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.EnumDropDownListFor(
                 x => x.Gender,
-                "",
+                "Оберіть вашу стать",
                 new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.CreditCardNumber, new { @class = "col-md-2 control-label" })
+        @Html.Label("Номер кредитки", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.CreditCardNumber, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.CreditCardNumber, new { @class = "form-control" , placeholder = "необов'язково" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.IsOrganizer, new { @class = "col-md-2 control-label" })
+       @Html.Label("Ви бажаєте зареєструватись як організатор?", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.CheckBoxFor(m => m.IsOrganizer, new { @class = "checkbox abc-checkbox" })
         </div>
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+        @Html.Label("Пароль", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+       @Html.Label("Підтвердження паролю", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
         </div>
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+            <input type="submit" class="btn btn-default" value="Зареєструватись" />
         </div>
     </div>
 }
+
+@*<h2>Покупка квитка</h2>
+
+<div class="form-group">
+    @Html.Label("Трансляція боксу")
+</div>
+<div class="form-group">
+    @Html.Label("Без опису")
+</div>
+<div class="form-group">
+    @Html.Label("Населений пункт: Черкаси")
+</div>
+<div class="form-group">
+    @Html.Label("Організатор: Лаціна Руслан")
+</div>
+<div class="form-group">
+    @Html.Label("Адреса: вул. Гетьманський Шлях, 75")
+</div>
+<div class="form-group">
+    @Html.Label("Дата: 14 Чер 2017")
+</div>
+<div class="form-group">
+    @Html.Label("Час: 22:00")
+</div>
+<div class="form-group">
+    @Html.Label("Введіть номер вашої кредитки")
+    @Html.TextBox("", new { @class = "form-control", placeholder = "4561261212345467" })
+</div>
+<div class="form-group">
+    @Html.Label("Тип заходу: Спорт")
+</div>
+<button type="submit" class="btn btn-primary btn-lg">Підвердити покупку</button>*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

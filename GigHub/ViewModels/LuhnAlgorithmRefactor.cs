@@ -6,6 +6,8 @@ namespace GigHub.ViewModels
     {
         public bool IsValid(object value)
         {
+            if (value == null)
+                return true;
             string creditCardNumber = value.ToString();
             if (!string.IsNullOrEmpty(creditCardNumber) && creditCardNumber.Length == 16)
             {

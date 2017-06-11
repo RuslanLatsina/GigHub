@@ -109,7 +109,7 @@ namespace GigHub.Controllers
                 GenreId = viewModel.Genre,
                 Address = viewModel.Address,
                 City = viewModel.City,
-                Description = viewModel.Description,
+                Description = viewModel.Description ?? (viewModel.Description = "Без опису"),
                 Price = viewModel.Price ?? (viewModel.Price = "Безкоштовний вхід"),
                 Title = viewModel.Title,
                 Seats = viewModel.Seats

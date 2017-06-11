@@ -7,7 +7,7 @@
 {
     <div class="form-group">
         <div id="searchGigs" class="input-group">
-            @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control", placeholder = "Search by Artist, Genre or Location..." })
+            @Html.TextBoxFor(m => m.SearchTerm, new { @class = "form-control", placeholder = "Пошук по жанру, організатору чи місто..." })
             <span class="input-group-addon">
                 <i class="glyphicon glyphicon-search"></i>
             </span>
@@ -28,24 +28,25 @@
             </div>
             <div class="details">
                 <span class="artist">
-                    @gig.Organizer.UserName
-                    @gig.Organizer.Gender
+                    @gig.Title
+                    @gig.City
                     @if (gig.IsCanceled)
                     {
-                        <span class="label label-warning">Canceled</span>
+                        <span class="label label-warning">Відмінено</span>
                     }
 
                     @if (Model.ShowActions)
                     {
-                        <button class="btn btn-link btn-sm js-toggle-follow" data-user-id="@gig.OrganizerId">Follow</button>
+                        <button class="btn btn-link btn-sm js-toggle-follow" data-user-id="@gig.OrganizerId">Підписатись</button>
                     }
                 </span>
                 <span class="genre">
                     @gig.Genre.Name
                 </span>
+
                 @if (Model.ShowActions && !gig.IsCanceled)
                 {
-                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Going?</button>
+                    <button data-gig-id="@gig.Id" class="btn btn-default btn-sm pull-right js-toggle-attendance">Піду?</button>
                 }
             </div>
         </li>

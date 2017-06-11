@@ -1,5 +1,7 @@
 ﻿using GigHub.Models;
 using GigHub.ViewModels;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Data.Entity;
 using System.Linq;
@@ -18,6 +20,7 @@ namespace GigHub.Controllers
 
         public ActionResult Index(string query = null)
         {
+           
             var upcomingGigs = _context.Gigs
                 .Include(g => g.Organizer)
                 .Include(g => g.Genre)
@@ -36,7 +39,7 @@ namespace GigHub.Controllers
             {
                 UpcomingGigs = upcomingGigs,
                 ShowActions = User.Identity.IsAuthenticated,
-                Heading = "Upcoming Gigs",
+                Heading = "Найближчі події",
                 SearchTerm = query
             };
 

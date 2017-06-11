@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>My Upcoming Gigs</h2>
+<h2>Мої події</h2>
 <ul class="gigs voffset4">
     @foreach (var gig in Model)
     {
@@ -19,7 +19,7 @@
             </div>
             <div class="details">
                 <span class="artist">
-                    @gig.Venue
+                    @gig.City
                 </span>
                 <span class="genre">
                     @gig.Genre.Name

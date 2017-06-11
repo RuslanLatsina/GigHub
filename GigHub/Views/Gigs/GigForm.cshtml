@@ -7,7 +7,7 @@
 <h2>@Model.Heading</h2>
 @using (Html.BeginForm(Model.Action, "Gigs"))
 {
-    <p class="alert alert-info">All fields are <strong>required</strong>.</p>
+    <p class="alert alert-info">Заповніть <strong>бажано</strong> всі поля .</p>
     @Html.AntiForgeryToken()
     @Html.HiddenFor(m => m.Id)
     <div class="form-group">
@@ -57,6 +57,9 @@
     </div>
     <button type="submit" class="btn btn-primary btn-lg">Зберегти</button>
 }
+
+
+
 @section scripts
 {
     @Scripts.Render("~/bundles/jqueryval")
