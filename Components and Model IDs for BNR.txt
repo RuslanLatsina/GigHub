@@ -1,0 +1,28 @@
+Models:
+        MainModule = 0x00,
+        Spine = 0x01, // not used
+        CashBox = 0x02,
+        Recycler = 0x03,
+        Payout = 0x04,
+        Interlock = 0x05,
+        Bundler = 0x06,
+        BarcodeReader = 0x07,
+        NotDefined = 0xFF
+		
+Components:
+        BasicBoot = 0x00,
+        MainBoot = 0x10,
+        Application = 0x20,
+        FPGAVariant_B = 0x30,
+        FPGAVariant_FULL = 0x31,
+        FPGAVariant_UV = 0x32,
+        MainBillsetVariant_B = 0x40,
+        MainBillsetVariant_FULL = 0x41,
+        MainBillsetVariant_UV = 0x42,
+        CPUBoard = 0x80,
+        SensorBoard = 0x90,
+        HibouBoard = 0xA0,
+        MainRecognitionSensorVariant_B = 0xB0,
+        MainRecognitionSensorVariant_FULL = 0xB1,
+        MainRecognitionSensorVariant_UV = 0xB2,
+        NotDefined = 0xFF	
